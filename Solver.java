@@ -203,18 +203,29 @@ public class Solver {
         System.out.print("Solve using 1-A* 2-BFS 3-DFS:");
         int method = in.nextInt();
         Board initial = new Board(tiles);
-        Solver solver = new Solver(initial, SearchTechnique.DFS);
+        Solver solver = null;
 
         switch (method) {
             case 1:
-                solver.solve();
+                System.out.print("Heuristic 1-Manhattan 2-Euclidean:");
+                int heuristic = in.nextInt();
+                switch (heuristic){
+                    case 1:
+                        solver = new Solver(initial, SearchTechnique.MANHATTAN);
+                        break;
+                    case 2:
+                        solver = new Solver(initial, SearchTechnique.EUCLIDEAN);
+                        break;
+                }
                 break;
             case 2:
-                System.out.print("Under Construction ..");
+                solver = new Solver(initial, SearchTechnique.BFS);
                 break;
             case 3:
-                System.out.print("Under Construction ..");
+                solver = new Solver(initial, SearchTechnique.DFS);
                 break;
         }
+        assert solver != null;
+        solver.solve();
     }
 }
