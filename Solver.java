@@ -174,24 +174,34 @@ public class Solver {
 
     // driver code
     public static void main(String[] args) throws IOException {
-        
-        // read data from text file provided in arguments
-        // note that file must be put in project folder
-        if (args.length > 0) {
-            File input = new File(System.getProperty("user.dir") + args[0]);
-            Scanner in = new Scanner(input);
-            int n = in.nextInt();
-            int[][] tiles = new int[n][n];
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                    tiles[i][j] = in.nextInt();
-                }
-            }
 
-            Board initial = new Board(tiles);
-            Solver solver = new Solver(initial);
-            solver.solve();
+        // read data from console
+        Scanner in= new Scanner(System.in);
+        System.out.print("Enter the size of the puzzle:");
+        int n = in.nextInt();
+        int[][] tiles = new int[n][n];
+        System.out.print("Enter the tiles of the puzzle:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                tiles[i][j] = in.nextInt();
+            }
         }
-        else throw new IllegalArgumentException("Not enough arguments");
+
+        System.out.print("Solve using 1-A* 2-BFS 3-DFS:");
+        int method = in.nextInt();
+        Board initial = new Board(tiles);
+        Solver solver = new Solver(initial);
+
+        switch (method){
+            case 1:
+                solver.solve();
+                break;
+            case 2:
+                System.out.print("Under Construction ..");
+                break;
+            case 3:
+                System.out.print("Under Construction ..");
+                break;
+        }
     }
 }
