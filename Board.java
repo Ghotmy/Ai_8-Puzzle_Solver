@@ -75,6 +75,21 @@ public class Board {
         return m;
     }
 
+    public int euclidean() {
+        int e = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (tiles[i][j] == 0) continue;
+                if (tiles[i][j] != (n * i) + j) {
+                    int row = (int) Math.ceil((double) tiles[i][j] / n) - 1;
+                    int col = (tiles[i][j] - 1) % n;
+                    e+= Math.sqrt(Math.pow(row-i,2)+Math.pow(col-j,2));
+                }
+            }
+        }
+        return e;
+    }
+
     // is this board the goal board?
     public boolean isGoal() {
         // loop on all tiles, if a tile is out of place it returns false,
