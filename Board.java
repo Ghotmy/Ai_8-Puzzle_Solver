@@ -48,7 +48,7 @@ public class Board {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (tiles[i][j] == 0) continue;
-                if (tiles[i][j] != (n * i) + j + 1) h++;
+                if (tiles[i][j] != (n * i) + j) h++;
             }
         }
         return h;
@@ -65,7 +65,7 @@ public class Board {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (tiles[i][j] == 0) continue;
-                if (tiles[i][j] != (n * i) + j + 1) {
+                if (tiles[i][j] != (n * i) + j) {
                     int row = (int) Math.ceil((double) tiles[i][j] / n) - 1;
                     int col = (tiles[i][j] - 1) % n;
                     m += Math.abs(row - i) + Math.abs(col - j);
@@ -82,7 +82,7 @@ public class Board {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (i == n - 1 && j == n - 1 && tiles[i][j] == 0) break;
-                if (tiles[i][j] != (n * i) + j + 1) return false;
+                if (tiles[i][j] != (n * i) + j) return false;
             }
         }
         return true;
