@@ -1,6 +1,6 @@
-# 15-Puzzle Solver
+# 8-Puzzle Solver
 
-The 15-puzzle is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing.The goal of the puzzle is to place the tiles in order by making sliding moves that use the empty space.
+The 9-puzzle is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing.The goal of the puzzle is to place the tiles in order by making sliding moves that use the empty space.
 
 ![source: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/15-puzzle-loyd.svg/220px-15-puzzle-loyd.svg.png)
 
