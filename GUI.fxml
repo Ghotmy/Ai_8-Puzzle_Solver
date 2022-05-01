@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Pane id="puzzle" layoutX="273.0" layoutY="90.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20;">
+         <children>
+            <Label id="p0" fx:id="p0" alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="0" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label id="p1" fx:id="p1" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="1" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label id="p2" fx:id="p2" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="2" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label id="p3" fx:id="p3" alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="3" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label id="p4" fx:id="p4" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="4" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label id="p5" fx:id="p5" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="100.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="5" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label id="p6" fx:id="p6" alignment="CENTER" contentDisplay="CENTER" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="6" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label id="p7" fx:id="p7" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="7" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label id="p8" fx:id="p8" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="200.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFFFF; -fx-border-color: #6F6866; -fx-border-radius: 12; -fx-background-radius: 12;" text="8" textAlignment="CENTER" textFill="#6f6866" textOverrun="CLIP">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button id="generate_btn" layoutX="460.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#generate" prefHeight="29.0" prefWidth="113.0" text="Generate Puzzle" />
+      <TextField id="input_txt" fx:id="input_" layoutX="38.0" layoutY="32.0" prefHeight="29.0" prefWidth="403.0" promptText="example : 0 1 2 3 4 5 6 7 8" />
+      <Button id="solve_btn" layoutX="35.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#SOLVE_NOW" prefHeight="37.0" prefWidth="205.0" text="SOLVE !" />
+      <ComboBox fx:id="comb_meth" layoutX="35.0" layoutY="117.0" prefHeight="37.0" prefWidth="205.0" promptText="Choose Method" />
+      <Slider layoutX="35.0" fx:id="slid" onMouseReleased="#changeSpeed" layoutY="214.0" max="1000.0" min="50.0" prefHeight="20.0" prefWidth="205.0" value="500.0" />
+      <Label alignment="CENTER" layoutX="39.0" layoutY="196.0" prefHeight="19.0" prefWidth="198.0" text="Speed" />
+   </children>
+</Pane>

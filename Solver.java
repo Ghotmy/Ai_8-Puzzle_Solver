@@ -176,9 +176,9 @@ public class Solver {
     public void solve() {
         if (solvable) {
             System.out.println("Solving state: Solvable\n");
-            for(Board board : this.solution) {
-                System.out.println(board.toString());
-            }
+//            for(Board board : this.solution) {
+//                System.out.println(board.toString());
+//            }
             System.out.println("Number of moves: " + solNode.moves);
         } else {
             System.out.println("Solving State: Unsolvable.\n");
@@ -189,6 +189,8 @@ public class Solver {
     public static void main(String[] args) throws IOException {
 
         // read data from console
+        // you can run the code from here or from the UI
+        // here you can solve any n*n puzzle .. while in the UI you can solve only 3*3 puzzle for now
         Scanner in = new Scanner(System.in);
         System.out.print("Enter the size of the puzzle:");
         int n = in.nextInt();

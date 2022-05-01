@@ -21,6 +21,16 @@ public class Board {
         n = tiles[0].length;
     }
 
+    public String toArray(){
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                s.append(String.format("%2d ", tiles[i][j]));
+            }
+        }
+        return s.toString();
+    }
+
     // string representation of this board
     public String toString() {
         StringBuilder s = new StringBuilder();
