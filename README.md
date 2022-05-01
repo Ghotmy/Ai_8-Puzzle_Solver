@@ -1,12 +1,7 @@
 # 8-Puzzle Solver
 
-The 9-puzzle is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing.The goal of the puzzle is to place the tiles in order by making sliding moves that use the empty space.
+The 8-puzzle is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing.The goal of the puzzle is to place the tiles in order by making sliding moves that use the empty space.
 
-![source: Wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/15-puzzle-loyd.svg/220px-15-puzzle-loyd.svg.png)
+![Screenshot](screenshot.jpeg)
 
-I used A* search algorithm to implement the solving method. I also used manhattan heruistic function to guide the A* algorithm. I also used `algs4.cs.princeton.edu.MinPQ` class to use a minimum priority queue for the implelemntation of the A* algorithm.
-
-### How to use:
-* `cd` to your cloned project directory
-* After compiling the `.java` files, type `java Solver YOUR_INPUT_FILE_NAME.txt` into the cmd
-* The output would be displayed on the console
+We used A*, DFS, and BFS search algorithms to implement the solving method. We also used Manhattan and Euclidean heruistic functions to guide the A* algorithm. We also used `algs4.cs.princeton.edu.MinPQ` class to use a minimum priority queue for the implelemntation of the A* algorithm.
